@@ -6,7 +6,7 @@ import { getSummarizedArticle, extractArticle, summarizeText } from './utils/api
 const fetchCredits = async () => {
   try {
     const ip = 'user_ip_here'; // You can use an IP library or fetch the IP dynamically
-    const response = await fetch('http://localhost:4001/get-credits', {
+    const response = await fetch('nodejs-production-5af0.up.railway.app/get-credits', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ export default function HomePage() {
 
       // Update credits in the database after each summarize action
       const ip = 'user_ip_here'; // Same IP logic as earlier
-      await fetch('http://localhost:4001/update-credits', {
+      await fetch('nodejs-production-5af0.up.railway.app/update-credits', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
